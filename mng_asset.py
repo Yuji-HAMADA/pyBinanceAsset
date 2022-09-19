@@ -9,7 +9,7 @@ API_KEY='apikeyapikey'
 SECRET_KEY='secretkeysecretkey'
 """
 client = Spot(key=settings.API_KEY, secret=settings.SECRET_KEY)
-
+ 
 spot = client.account_snapshot('SPOT')
 spotFile = open('./spot.json', mode="w")
 json.dump(spot, spotFile)
