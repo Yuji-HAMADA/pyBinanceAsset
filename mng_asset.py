@@ -1,7 +1,7 @@
 from binance.spot import Spot
 import json
 import settings
-
+ 
 """
 api key/secret are required for user data endpoints
 Should be set in setting.py of the same folder like below
