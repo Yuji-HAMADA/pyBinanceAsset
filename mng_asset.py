@@ -9,18 +9,18 @@ API_KEY='apikeyapikey'
 SECRET_KEY='secretkeysecretkey'
 """
 client = Spot(key=settings.API_KEY, secret=settings.SECRET_KEY)
- 
+
 spot = client.account_snapshot('SPOT')
-spotFile = open('./spot.json', mode="w")
-json.dump(spot, spotFile)
-spotFile.close()
+f = open('./spot.json', mode="w")
+json.dump(spot, f)
+f.close()
 
 staking = client.staking_product_position('STAKING')
-fileStaking = open('./staking.json', mode="w")
-json.dump(staking, fileStaking)
-fileStaking.close()
+f = open('./staking.json', mode="w")
+json.dump(staking, f)
+f.close()
 
 saving = client.savings_flexible_product_position()
-fileFlexible = open('./saving.json', mode="w")
-json.dump(saving, fileFlexible)
-fileFlexible.close()
+f = open('./saving.json', mode="w")
+json.dump(saving, f)
+f.close()
